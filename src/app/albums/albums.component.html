@@ -1,0 +1,14 @@
+
+
+<div class="container">
+    <ng-container *ngFor="let albums of albumsGroup,let i = index" >
+        <div class="card border-0">
+            <div class="card-body">
+                <p class="card-title text-primary" *ngIf="i !=0">{{albumsGroup[i][albums.length-1]?.userName}}</p>
+                <ng-container *ngFor="let data of albums">
+                <p role="button">{{data.title}}</p>
+                </ng-container>
+            </div>
+        </div>
+    </ng-container>
+</div>

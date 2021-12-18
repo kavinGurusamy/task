@@ -1,0 +1,23 @@
+
+
+<div class="container">
+
+    <table class="table">
+        <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Address</th>
+            <th scope="col">Posts</th>
+        </thead>
+         <tbody>
+             <tr *ngFor="let user of users">
+                 <td>{{user.name}}</td>
+                 <td>{{user.email}}</td>
+                 <td>{{user.phone}}</td>
+                 <td>{{user.address.street}},{{user.address.city}},{{user.address.zipcode}}</td>
+                 <td role="button" [routerLink]="['/userpost',user.id]" routerLinkActive="router-link-active" >Posts</td>
+             </tr>
+         </tbody>
+    </table>
+</div>

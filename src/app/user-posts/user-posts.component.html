@@ -1,0 +1,21 @@
+
+
+<div class="container">
+     <table class="table">
+         <thead>
+             <tr>
+                 <th scope="col">UserId</th>
+                 <th scope="col">Title</th>
+                 <th scope="col">Body</th>
+             </tr>
+         </thead>
+         <tbody>
+             <tr *ngFor="let details of userPost">
+                 <td>{{details.userId}}</td>
+                 <td>{{details.title}}</td>
+                 <td>{{details.body}}</td>
+             </tr>
+         </tbody>
+
+     </table>
+</div>
